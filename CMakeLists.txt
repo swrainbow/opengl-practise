@@ -17,6 +17,7 @@ set(GLAD_HOME $ENV{GLAD_HOME})
 # 设置头文件目录
 include_directories("${GLFW_HOME}/include")
 include_directories("${GLAD_HOME}/include")
+include_directories("/opt/homebrew/Cellar/glm/0.9.9.8/include")
 
 # 添加 GLFW3 预编译库
 add_library(glfw SHARED IMPORTED lib/glad.c)
