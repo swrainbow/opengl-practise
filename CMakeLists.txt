@@ -17,6 +17,7 @@ set(GLAD_HOME $ENV{GLAD_HOME})
 # 设置头文件目录
 include_directories("${GLFW_HOME}/include")
 include_directories("${GLAD_HOME}/include")
+include_directories("/opt/homebrew/Cellar/glm/0.9.9.8/include")
 
 # 添加 GLFW3 预编译库
 add_library(glfw SHARED IMPORTED lib/glad.c)
@@ -24,7 +25,13 @@ SET_TARGET_PROPERTIES(glfw PROPERTIES IMPORTED_LOCATION "${GLFW_HOME}/lib/libglf
 
 
 # 创建可执行文件
-add_executable(learnOpengl main.cpp "lib/glad.c" shader_s.h stb_image.h)
+add_executable(learnOpengl
+        light_cast.cpp
+        "lib/glad.c"
+        shader_s.h
+        stb_image.h
+        include/camera.h
+        )
 
 # 链接 GLFW GLAD OpenGL
 target_link_libraries(learnOpengl glfw "-framework OpenGL")
