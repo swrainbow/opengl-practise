@@ -31,12 +31,12 @@ SET_TARGET_PROPERTIES(glfw PROPERTIES IMPORTED_LOCATION "${GLFW_HOME}/lib/libglf
 # 创建可执行文件
 add_executable(learnOpengl
 #        light_cast.cpp
-        model_import.cpp
+#        model_import.cpp
         "lib/glad.c"
         shader_s.h
         stb_image.h
         include/camera.h
-        include/model.h include/mesh.h)
+        include/model.h include/mesh.h advanced.cpp blending.cpp)
 
 # 链接 GLFW GLAD OpenGL
 target_link_libraries(learnOpengl glfw "-framework OpenGL")
