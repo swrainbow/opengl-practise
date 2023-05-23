@@ -37,11 +37,12 @@ add_executable(learnOpengl
 #        cube.cpp
 #        gemotery.cpp
 #        instance2.cpp
+#        asteroids_instanced.cpp
         "lib/glad.c"
         shader_s.h
         stb_image.h
         include/camera.h
-        include/model.h include/mesh.h asteroids_instanced.cpp)
+        include/model.h include/mesh.h advanced_lighting.cpp)
 
 # 链接 GLFW GLAD OpenGL
 target_link_libraries(learnOpengl glfw "-framework OpenGL")
