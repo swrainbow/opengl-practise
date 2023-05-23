@@ -33,11 +33,13 @@ add_executable(learnOpengl
 #        light_cast.cpp
 #        model_import.cpp
 #        blending.cpp
+#        framebuffer.cpp
+#        cube.cpp
         "lib/glad.c"
         shader_s.h
         stb_image.h
         include/camera.h
-        include/model.h include/mesh.h  framebuffer.cpp)
+        include/model.h include/mesh.h gemotery.cpp)
 
 # 链接 GLFW GLAD OpenGL
 target_link_libraries(learnOpengl glfw "-framework OpenGL")
