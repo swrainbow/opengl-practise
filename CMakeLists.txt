@@ -39,11 +39,13 @@ add_executable(learnOpengl
 #        instance2.cpp
 #        asteroids_instanced.cpp
 #        advanced_lighting.cpp
+#        gamma.cpp
+#        shadow.cpp
         "lib/glad.c"
         shader_s.h
         stb_image.h
         include/camera.h
-        include/model.h include/mesh.h gamma.cpp)
+        include/model.h include/mesh.h point.cpp)
 
 # 链接 GLFW GLAD OpenGL
 target_link_libraries(learnOpengl glfw "-framework OpenGL")
