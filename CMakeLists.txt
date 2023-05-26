@@ -44,7 +44,8 @@ add_executable(learnOpengl
 #        shadow.cpp
 #        normal_mapping.cpp
 #        hdr.cpp
-        bloom.cpp
+#        bloom.cpp
+        deferred_shading.cpp
         "lib/glad.c"
         shader_s.h
         stb_image.h
